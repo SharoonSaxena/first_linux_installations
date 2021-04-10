@@ -1,0 +1,2 @@
+#### Cuda Purge
+sudo apt-get autoremove --purge cuda 
