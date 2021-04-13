@@ -1,3 +1,11 @@
+# To start fresh, clean up all the nivida-related packages. Be careful when using the same system as a desktop!
+sudo apt-get --purge remove 'cuda*'
+sudo apt-get --purge remove 'nvidia*'
+sudo apt-get --purge remove 'libnvidia*'
+
+# Check if all clean
+sudo find /usr/local/cuda/ -name '*blas*'
+sudo find /usr/lib/ -name '*blas*'
 
 sudo apt install ./libnvinfer7_7.1.3-1+cuda11.0_amd64.deb
 # Add NVIDIA package repositories
