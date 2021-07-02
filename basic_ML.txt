@@ -1,8 +1,0 @@
-## installing pip3 
-sudo apt install python3-pip
-
-# Basic Data Science Libraries
-pip3 install sklearn pandas seaborn tqdm dask jupyterlab nbconvert pyspark koalas
-
-
-
