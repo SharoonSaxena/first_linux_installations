@@ -1,0 +1,9 @@
+sudo apt update
+
+## installing pip3 
+sudo apt install python3-pip
+
+# Basic Data Science Libraries
+pip3 install pandas seaborn tqdm jupyterlab nbconvert nb_black
+pip3 install bokeh tensorflow dask distributed --upgrade 
+pip3 install nltk bs4
