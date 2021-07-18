@@ -9,4 +9,4 @@ pip3 install pandas seaborn tqdm jupyterlab nbconvert nb_black
 pip3 install bokeh tensorflow dask distributed --upgrade 
 pip3 install nltk bs4
 pip3 install pydot
-
+pip3 install jupyter_contrib_nbextensions
