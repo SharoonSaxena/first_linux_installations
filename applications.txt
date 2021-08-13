@@ -24,7 +24,3 @@ sudo apt install mailspring
 ## for ipynb downloads
 sudo apt-get install pandoc
 sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-recommended
-
-
-## Microsoft teams
-sudo apt install teams
