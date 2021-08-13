@@ -24,3 +24,8 @@ sudo apt install mailspring
 ## for ipynb downloads
 sudo apt-get install pandoc
 sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+
+
+## Microsoft Teams
+wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
+sudo dpkg -i teams_1.3.00.16851_amd64.deb
