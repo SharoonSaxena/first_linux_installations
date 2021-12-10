@@ -2,7 +2,7 @@ sudo apt update
 
 ## installing pip3 
 sudo apt install python3-pip
-suso apt install graphviz
+sudo apt install graphviz
 
 # Basic Data Science Libraries
 pip3 install pandas seaborn tqdm jupyterlab nbconvert nb_black
