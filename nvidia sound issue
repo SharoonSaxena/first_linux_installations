@@ -1,0 +1,10 @@
+## To rectify sound card issue due to nvidia GPU
+sudo apt-get install build-essential linux-headers-`USERNAME -r` alsa-base alsa-firmware-loaders alsa-oss alsa-source alsa-tools alsa-tools-gui alsa-utils alsamixergui
+
+sudo apt-get update
+sudo apt-get --reinstall install pavucontrol linux-sound-base alsa-base alsa-utils libasound2
+sudo usermod -aG $(grep -e '^pulse:' -e '^audio:' -e \
+'^pulse-access:' -e '^pulse-rt:' -e '^video:' /etc/group \
+| awk -F: '{print $1}' \
+| tr '\n' ',' \
+| sed 's:,$::g') $(whoami)
