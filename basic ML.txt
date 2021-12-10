@@ -6,6 +6,7 @@ sudo apt install graphviz
 ## for ipynb downloads
 sudo apt-get install pandoc
 sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+sudo apt install jupyter-core
 
 # Basic Data Science Libraries
 pip3 install pandas seaborn tqdm jupyterlab nbconvert nb_black
