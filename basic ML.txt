@@ -12,3 +12,4 @@ pip3 install pydot
 pip3 install jupyter_contrib_nbextensions
 pip3 install tensorflow-datasets
 pip3 install ipywidgets
+pip3 install statsmodels
