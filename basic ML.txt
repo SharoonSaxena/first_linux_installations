@@ -1,5 +1,7 @@
 sudo apt update
 
+sudo apt install npm
+npm install -g npm
 sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended unrar jupyter-core python3-pip graphviz
 
 
