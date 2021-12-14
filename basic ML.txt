@@ -17,3 +17,4 @@ pip3 install jupyter_contrib_nbextensions
 pip3 install tensorflow-datasets
 pip3 install ipywidgets
 pip3 install statsmodels
+export PATH="$HOME/.local/bin:$PATH"
