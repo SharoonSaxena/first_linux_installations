@@ -1,13 +1,3 @@
-# To start fresh, clean up all the nivida-related packages. Be careful when using the same system as a desktop!
-sudo apt-get --purge remove 'cuda*'
-sudo apt-get --purge remove 'nvidia*'
-sudo apt-get --purge remove 'libnvidia*'
-
-# Check if all clean
-sudo find /usr/local/cuda/ -name '*blas*'
-sudo find /usr/lib/ -name '*blas*'
-
-sudo apt install ./libnvinfer7_7.1.3-1+cuda11.0_amd64.deb
 # Add NVIDIA package repositories
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -32,8 +22,11 @@ sudo apt-get install --no-install-recommends \
 
 # Reboot. Check that GPUs are visible using the command: nvidia-smi
 
-# Install TensorRT. Requires that libcudnn8 is installed above.
-sudo apt-get install -y --no-install-recommends libnvinfer7=7.1.3-1+cuda11.0 \
-    libnvinfer-dev=7.1.3-1+cuda11.0 \
-    libnvinfer-plugin7=7.1.3-1+cuda11.0
+# Use terminal to set path
+ nano /home/$USER/.bashrc
+ 
+# copy the following lines to set path of cuda
+export PATH="/usr/local/cuda-11.0/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
 
+nvcc --version
