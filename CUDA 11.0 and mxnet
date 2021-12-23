@@ -30,3 +30,5 @@ export PATH="/usr/local/cuda-11.0/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
 
 nvcc --version
+
+pip3 install mxnet-cu110==2.0.0a0
