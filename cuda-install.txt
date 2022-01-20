@@ -1,0 +1,52 @@
+# To start fresh, clean up all the nivida-related packages. Be careful when using the same system as a desktop!
+sudo apt-get --purge remove 'cuda*'
+sudo apt-get --purge remove 'nvidia*'
+sudo apt-get --purge remove 'libnvidia*'
+
+# Install nvidia drivers and utils (Check Recommended Drivers)
+sudo apt install nvidia-driver-495
+sudo apt install nvidia-utils-495
+
+# REBOOT
+
+# Installing CudaToolkit 11.2 (get the most recent compatible version from Nvidia Website)
+wget https://developer.download.nvidia.com/compute/cuda/11.2.2/local_installers/cuda_11.2.2_460.32.03_linux.run
+sudo sh cuda_11.2.2_460.32.03_linux.run
+
+# Setting Environment Variable ( Be Mindful of toolkit version)
+sudo nano ~/.bashrc
+
+# paste the following lines at bottom
+export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_HOME=/usr/local/cuda
+
+# Install cuDNN v8.1.0 (Check most recent compatible version) (Download from Nvidia)
+tar -zvxf cudnn-11.2-linux-x64-v8.1.0.77.tgz
+
+# open the environment variable file
+cd ~ 
+sudo gedit .bashrc
+
+# paste the following fill in the path of cuda
+export LD_LIBRARY_PATH=xxx/cuda/lib64:$LD_LIBRARY_PATH
+# Save file and run following
+source .bashrc
+
+# Restart the terminal, and copy the head files to the CUDA folder.
+cd xxx/cuda/include
+sudo cp *.h /usr/local/cuda/include/
+# replace xxx with your own path
+
+
+# Finally, reset the read and write permissions of the cudnn.h file.
+sudo chmod a+r /usr/local/cuda/include/cudnn.h
+
+# To verify the installation, check `nvidia-smi`, and `nvcc -V`.
+nvidia-smi
+nvcc -V
+
+############ THATS ALL FOR CUDA SETUP #################
+## Tensorflow and MxNet
+pip3 install mxnet-cu112==2.0.0a0
+pip3 install tensorflow
