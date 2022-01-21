@@ -2,6 +2,7 @@
 sudo apt-get --purge remove 'cuda*'
 sudo apt-get --purge remove 'nvidia*'
 sudo apt-get --purge remove 'libnvidia*'
+sudeo apt autoremove
 
 # Install nvidia drivers and utils (Check Recommended Drivers)
 sudo apt install nvidia-driver-470
