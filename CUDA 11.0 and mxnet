@@ -3,6 +3,10 @@ sudo apt-get --purge remove 'cuda*'
 sudo apt-get --purge remove 'nvidia*'
 sudo apt-get --purge remove 'libnvidia*'
 
+# Install nvidia drivers and utils (Check Recommended Drivers)
+sudo apt install nvidia-driver-470
+sudo apt install nvidia-utils-470
+
 # Add NVIDIA package repositories
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
