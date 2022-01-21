@@ -1,3 +1,8 @@
+# To start fresh, clean up all the nivida-related packages. Be careful when using the same system as a desktop!
+sudo apt-get --purge remove 'cuda*'
+sudo apt-get --purge remove 'nvidia*'
+sudo apt-get --purge remove 'libnvidia*'
+
 # Add NVIDIA package repositories
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
