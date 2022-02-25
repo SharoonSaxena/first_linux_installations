@@ -43,4 +43,5 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
 
 nvcc --version
 
+sudo apt-get -y install python3-pip
 pip3 install mxnet-cu110==2.0.0a0
