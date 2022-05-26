@@ -1,0 +1,23 @@
+## FOR DEBIAN/UBUNTU BASED SYATEMS
+sudo apt-get update
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+       libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+       libncurses5-dev libncursesw5-dev xz-utils tk-dev liblzma-dev install lzma
+
+## FOR RED HAT BASED LINUX
+sudo yum -y groupinstall "Development Tools"
+yum install -y lzma
+sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
+
+##COMMON COMMANDS
+wget https://www.python.org/ftp/python/3.8.4/Python-3.8.4.tgz
+tar xvf Python-3.8.4.tgz
+cd Python-3.8.4
+./configure --enable-optimizations --with-ensurepip=install
+make -j 8
+
+# For OverWriting Python
+sudo make install
+
+# Fo Alternate install of Python
+sudo male altinstall
