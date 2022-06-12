@@ -1,13 +1,13 @@
-conda install 
-conda dask 
-conda numpy 
-conda pandas 
-conda tqdm 
-conda seaborn 
-conda bokeh 
-conda distributed 
-conda nltk 
-conda bs4 
-conda pydot 
-conda ipywidgets 
-conda statsmodels
+conda install install 
+conda install dask 
+conda install numpy 
+conda install pandas 
+conda install tqdm 
+conda install seaborn 
+conda install bokeh 
+conda install distributed 
+conda install nltk 
+conda install bs4 
+conda install pydot 
+conda install ipywidgets 
+conda install statsmodels
