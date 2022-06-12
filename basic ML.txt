@@ -1,17 +1,1 @@
-sudo apt update
-
-sudo apt install npm
-sudo npm install -g npm
-sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended unrar jupyter-core python3-pip graphviz
-
-
-# Basic Data Science Libraries
-pip3 install pandas seaborn tqdm jupyterlab nbconvert nb_black
-pip3 install bokeh tensorflow dask distributed --upgrade 
-pip3 install nltk bs4
-pip3 install pydot
-pip3 install jupyter_contrib_nbextensions
-pip3 install tensorflow-datasets
-pip3 install ipywidgets
-pip3 install statsmodels
-export PATH="$HOME/.local/bin:$PATH"
+conda install dask numpy pandas tqdm seaborn bokeh distributed nltk bs4 pydot ipywidgets statsmodels
