@@ -1,14 +1,7 @@
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-conda install dask 
-conda install numpy 
-conda install pandas 
-conda install tqdm 
-conda install seaborn 
-conda install bokeh 
-conda install distributed 
-conda install nltk 
-conda install bs4 
-conda install pydot 
-conda install ipywidgets 
-conda install statsmodels
+# Basic Data Science Libraries
+pip install pandas seaborn tqdm nupy scipy
+pip install bokeh  dask["complete"] 
+pip install nltk bs4
+pip install pydot
+pip install ipywidgets
+pip install statsmodels
