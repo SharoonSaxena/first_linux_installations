@@ -8,4 +8,5 @@ pip install tensoflow
 mkdir -p $CONDA_PREFIX/etc/conda/activate.d
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 ## https://gist.github.com/zrruziev/b93e1292bf2ee39284f834ec7397ee9f
+sudo echo 0 | sudo tee -a /sys/bus/pci/devices/0000\:0a\00.0/numa_node
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
